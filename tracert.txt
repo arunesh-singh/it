@@ -1,0 +1,56 @@
+I don't have direct access to a network, and I cannot execute commands or interact with specific systems, including using `ping` or `tracert` to check connectivity or list processes on your network. However, I can guide you on how to perform these tasks using common commands:
+
+### 1. Check Connectivity with Ping:
+
+- Open a command prompt or terminal window.
+- Use the `ping` command followed by the IP address or hostname of the system you want to check. For example:
+
+    ```bash
+    ping <IP_address_or_hostname>
+    ```
+
+    If you see successful replies, it means you have a connection to that system.
+
+### 2. Trace Route with Tracert (Windows) or Tracepath (Linux/Mac):
+
+- For Windows:
+
+    ```bash
+    tracert <IP_address_or_hostname>
+    ```
+
+- For Linux/Mac:
+
+    ```bash
+    tracepath <IP_address_or_hostname>
+    ```
+
+    These commands will display the route taken to reach the destination system.
+
+### 3. List Processes Using Ports for TCP Protocol:
+
+- On Windows, you can use the `netstat` command:
+
+    ```bash
+    netstat -ano | findstr :<port_number>
+    ```
+
+    Replace `<port_number>` with the specific port number you're interested in.
+
+- On Linux/Mac, you can use `lsof` or `netstat`:
+
+    ```bash
+    lsof -i :<port_number>
+    ```
+
+    or
+
+    ```bash
+    netstat -an | grep <port_number>
+    ```
+
+    Again, replace `<port_number>` with the specific port number.
+
+These commands will show you processes that are currently using a specific port on your system. Note that on Linux, you might need to run these commands with elevated privileges (using `sudo`) to see all processes and their details.
+
+Remember to replace `<IP_address_or_hostname>` and `<port_number>` with the actual IP address or hostname and port number you are interested in. If you encounter any issues or have specific questions, feel free to ask for further assistance.

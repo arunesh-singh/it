@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B.Sc. Hons CS Course</title>
+    <style id="original-styles">
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+      }
+
+      #button-style {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>B.Sc. Hons CS Course</h1>
+
+    <h2>Details</h2>
+    <p><strong>Fee:</strong> ₹50,000 per year</p>
+    <p>
+      <strong>Eligibility Criteria:</strong> 10+2 with a minimum of 90% marks in
+      Science stream
+    </p>
+
+    <h2>Papers</h2>
+    <ul>
+      <li>Introduction to Computer Science (Credits: 4)</li>
+      <li>Data Structures and Algorithms (Credits: 5)</li>
+      <li>Database Management Systems (Credits: 4)</li>
+    </ul>
+
+    <h2>Future Possibilities</h2>
+    <p>
+      Graduates can pursue careers in software development, artificial
+      intelligence, data science, and more.
+    </p>
+
+    <button id="button-style" onclick="changeStyles()">
+      Style with jQuery
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      function changeStyles() {
+        // jQuery for redesigning the page
+        $("h1").css("color", "#e74c3c");
+        $("p").css("color", "#34495e");
+        $("ul").css("list-style-type", "none");
+        $("ul li").css({
+          "background-color": "#ecf0f1",
+          padding: "10px",
+          margin: "5px 0",
+          "border-radius": "5px",
+        });
+        $("#button-style").css({
+          "background-color": "#2ecc71",
+          color: "#fff",
+        });
+      }
+    </script>
+  </body>
+</html>

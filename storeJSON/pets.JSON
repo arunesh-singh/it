@@ -1,0 +1,10 @@
+[
+  {
+    "name": "jerry",
+    "age": "5",
+    "weight": "1",
+    "type": "Mouse",
+    "likes": "Butter"
+  },
+  { "name": "tom", "age": "10", "weight": "5", "type": "Cat", "likes": "fish" }
+]

@@ -1,0 +1,26 @@
+I don't have a real-time interface to execute commands or access specific system information, including IP addresses or subnet masks. My capabilities are limited to providing information and answering questions to the best of my knowledge.
+
+To find the information you're looking for on your own system, you can use the `ipconfig` command on Windows or the `ifconfig` command on Linux or macOS. Here's a general guide:
+
+### For Windows:
+
+1. Press `Win + R` to open the Run dialog.
+2. Type `cmd` and press Enter to open the Command Prompt.
+3. In the Command Prompt window, type `ipconfig` and press Enter.
+4. Look for the "IPv4 Address," "Subnet Mask," and "Default Gateway" under the network adapter you are using.
+
+### For Linux/Mac:
+
+1. Open a terminal.
+2. Type `ifconfig` and press Enter.
+3. Look for the "inet" address and "netmask" under the network adapter you are using.
+
+Once you have the IP address and subnet mask, you can calculate the network address, maximum number of systems, and the range of IP addresses. Here's a brief guide:
+
+1. **Network Address:** Perform a bitwise AND operation between the IP address and subnet mask.
+
+2. **Maximum Number of Systems:** Calculate 2^(32 - subnet mask bits). The result is the number of possible host addresses on the network, subtracting 2 for the network and broadcast addresses.
+
+3. **Range of IP Addresses:** The range starts from the network address + 1 and goes up to the broadcast address - 1.
+
+If you encounter any issues or have specific questions, feel free to ask for further clarification.

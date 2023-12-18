@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pets Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f2f2f2;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #petsContainer {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .petCard {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        margin-bottom: 10px;
+        border-radius: 0.5rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .petName {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .petDetails {
+        margin-top: 8px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Pets Information</h2>
+      <div id="petsContainer"></div>
+    </div>
+
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var pets = JSON.parse(this.responseText);
+
+          var container = document.getElementById("petsContainer");
+          pets.forEach(function (pet) {
+            var petCard = document.createElement("div");
+            petCard.classList.add("petCard");
+
+            var petName = document.createElement("div");
+            petName.classList.add("petName");
+            petName.textContent = pet.name;
+
+            var petDetails = document.createElement("div");
+            petDetails.classList.add("petDetails");
+            petDetails.textContent = `Age: ${pet.age} | Weight: ${pet.weight} kg | Type: ${pet.type} | Likes: ${pet.likes}`;
+
+            petCard.appendChild(petName);
+            petCard.appendChild(petDetails);
+            container.appendChild(petCard);
+          });
+        }
+      };
+      xhttp.open("GET", "pets.json", true);
+      xhttp.send();
+    </script>
+  </body>
+</html>
